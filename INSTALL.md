@@ -160,6 +160,6 @@ A Dockerfile is provided for your convenience. To begin, setup docker on your lo
 
     ./clean.sh  # because we are switching environments
     docker build . -t pret/pokeplatinum
-    docker run -u $USER -w /rom -v .:/rom pret/pokeplatinum ./config.sh  # first time only
-    docker run -u $USER -w /rom -v .:/rom pret/pokeplatinum ./build.sh
-    docker run -u $USER -w /rom -v .:/rom pret/pokeplatinum ./clean.sh  # before switching environments
+    docker run -w /rom -v .:/rom pret/pokeplatinum ./config.sh  # first time only
+    docker run -w /rom -v .:/rom pret/pokeplatinum ./build.sh
+    docker run -w /rom -v .:/rom pret/pokeplatinum ./clean.sh  # before switching environments
