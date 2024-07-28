@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 help() {
     echo "Syntax: ./make_script_bin.sh [OPTIONS] FILE..."
     echo "options:"
@@ -17,7 +19,7 @@ OBJCOPY="arm-none-eabi-objcopy"
 OUTDIR="."
 
 while [[ $# -gt 0 ]] ; do
-    case $1 in 
+    case $1 in
         -h|--help)
             help
             exit 0
